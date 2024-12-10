@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: monteserrat;
+    src: url(/public/fonts/Montserrat-Bold.ttf);
+}
+
+@layer utilities {
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+}
+
+@layer utilities {
+    @keyframes slide-in-horizontal {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px); 
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .animate-slide-in-horizontal {
+        animation: slide-in-horizontal 1s ease-out forwards;
+    }
+}
